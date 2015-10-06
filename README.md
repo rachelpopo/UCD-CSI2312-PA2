@@ -11,3 +11,5 @@ With our Point member and friend functions we are able to compare points, add/su
 Cluster.h & Cluster.cpp
 Cluster contains two private variables, size and points (points to struct.) The Cluster member and friend functions allow us to easily add and remove points to clusters, compare clusters, etc. 
 
+main.cpp 
+Used to test functions.
