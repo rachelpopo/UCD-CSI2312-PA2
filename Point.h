@@ -1,9 +1,8 @@
 //
-// Created by Rachel Popo on 9/21/15.
+// Created by Rachel Popo
 //
-
-#ifndef CSI2312_PA2_POINT_H
-#define CSI2312_PA2_POINT_H
+#ifndef CLUSTERING_POINT_H
+#define CLUSTERING_POINT_H
 
 #include <iostream>
 
@@ -14,6 +13,7 @@ namespace Clustering {
         double *values; // values of the point's dimensions
 
     public:
+        Point();
         Point(int);
         Point(int, double *);
 
@@ -23,9 +23,11 @@ namespace Clustering {
         ~Point();
 
         // Accessors & mutators
-        int getDims() const { return dim; }
+        int getDim() const { return dim; }
         void setValue(int, double);
         double getValue(int) const;
+        void clear();
+        void append(double);
 
         // Functions
         double distanceTo(const Point &) const;
@@ -38,6 +40,7 @@ namespace Clustering {
         const Point operator*(double) const; // prevent (p1*2) = p2;
         const Point operator/(double) const;
 
+        // Note: 1-based index!
         double &operator[](int index) { return values[index - 1]; } // TODO out-of-bds?
 
         // Friends
@@ -59,5 +62,4 @@ namespace Clustering {
     };
 
 }
-
-#endif //CSI2312_PA2_POINT_H
+#endif //CLUSTERING_POINT_H
