@@ -1,3 +1,5 @@
+$ git tag "version 2.0"
+
 //
 // Created by Rachel Popo
 #ifndef CLUSTERING_CLUSTER_H
